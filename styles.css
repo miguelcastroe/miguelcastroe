@@ -19,6 +19,12 @@ header h1, header h2 {
     font-size: 1.5em;
 }
 
+.subtext {
+    font-weight: 300;
+    color: #999;
+    font-size: 0.8em;
+}
+
 .main-images {
     display: flex;
     justify-content: space-between;
@@ -27,6 +33,7 @@ header h1, header h2 {
 
 .image-container {
     width: 32%;
+    position: relative;
     overflow: hidden;
 }
 
@@ -34,24 +41,34 @@ header h1, header h2 {
     width: 100%;
     height: auto;
     object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
-.circle-section {
-    display: flex;
-    justify-content: center;
-    margin: 40px 0;
+.image-container:hover img {
+    transform: scale(1.1); /* Slight zoom on hover */
 }
 
-.circle-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 0 20px;
-}
-
-.circle-image img {
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-container:hover .image-overlay {
+    opacity: 1; /* Fade in the overlay on hover */
+}
+
+.image-overlay p {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
 }
