@@ -7,6 +7,8 @@
 
 body {
     font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 /* Header Styling */
@@ -37,11 +39,13 @@ header h2 {
 .main-images {
     display: flex;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0; /* Remove all padding */
+    margin: 0;  /* Ensure no margin on the sides */
+    gap: 0; /* No gap between the images */
 }
 
 .image-container {
-    width: 32%;
+    flex: 1; /* Make images equally fill available space */
     position: relative;
     overflow: hidden;
 }
@@ -52,7 +56,7 @@ header h2 {
     object-fit: cover;
     transition: transform 0.3s ease;
     display: block;
-    height: 100vh; /* Full viewport height to match the design */
+    height: 100vh; /* Full viewport height */
 }
 
 .image-container:hover img {
