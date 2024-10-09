@@ -3,74 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Mike's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- Header -->
     <header>
         <h1>Mike's Portfolio</h1>
-        <h2>Work, Studio</h2>
+        <nav>
+            <ul>
+                <li>Work, Studio</li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Main Images Section -->
-    <div class="main-images">
-        <!-- Image 1 Container -->
-        <div class="image-container image1">
-            <img src="image1.jpg" alt="Project 1">
-            <div class="ellipsis">
-                <span class="dots">•••</span>
-                <span class="view-project">View Project</span>
+    <main>
+        <div class="projects-container">
+            <div class="project">
+                <div class="image-container">
+                    <img src="project1.jpg" alt="Project 1">
+                    <div class="ellipsis">
+                        <span>•••</span>
+                        <button class="view-project">View Project</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="image-container">
+                    <img src="project2.jpg" alt="Project 2">
+                    <div class="ellipsis">
+                        <span>•••</span>
+                        <button class="view-project">View Project</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="image-container">
+                    <img src="project3.jpg" alt="Project 3">
+                    <div class="ellipsis">
+                        <span>•••</span>
+                        <button class="view-project">View Project</button>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- Image 2 Container -->
-        <div class="image-container image2">
-            <img src="image2.jpg" alt="Project 2">
-            <div class="ellipsis">
-                <span class="dots">•••</span>
-                <span class="view-project">View Project</span>
-            </div>
-        </div>
-
-        <!-- Image 3 Container -->
-        <div class="image-container image3">
-            <img src="image3.jpg" alt="Project 3">
-            <div class="ellipsis">
-                <span class="dots">•••</span>
-                <span class="view-project">View Project</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Project List Section -->
-    <section class="project-list">
-        <p>Most Recent, A to Z</p>
-        <ul>
-            <li>
-                <span>Studio Röder</span>
-                <span>Digital, Identity, Print, Publication</span>
-                <a href="#">View</a>
-            </li>
-            <li>
-                <span>Brutalist Scotland</span>
-                <span>Print, Publication</span>
-                <a href="#">View</a>
-            </li>
-            <li>
-                <span>Queer East Festival 2024</span>
-                <span>Digital, Display & Signage, Identity, Print</span>
-                <a href="#">View</a>
-            </li>
-            <li>
-                <span>To The Water</span>
-                <span>Print, Publication</span>
-                <a href="#">View</a>
-            </li>
-            <!-- More Projects -->
-        </ul>
-    </section>
-
+        <section class="project-list">
+            <h2>Most Recent, A to Z</h2>
+            <ul>
+                <li>Studio Röder <span>Digital, Identity, Print, Publication</span> <a href="#">View</a></li>
+                <li>Brutalist Scotland <span>Print, Publication</span> <a href="#">View</a></li>
+                <li>Queer East Festival 2024 <span>Digital, Display & Signage, Identity, Print</span> <a href="#">View</a></li>
+                <li>To The Water <span>Print, Publication</span> <a href="#">View</a></li>
+                <li>Apotheanic <span>Identity, Packaging, Print</span> <a href="#">View</a></li>
+            </ul>
+        </section>
+    </main>
 </body>
 </html>
