@@ -13,7 +13,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 /* Header Styling */
@@ -25,18 +25,22 @@ header {
     width: 100vw;
     height: 40px; /* Header height set to 40px */
     box-sizing: border-box;
+    position: sticky; /* Make header sticky */
+    top: 0; /* Stick it to the top */
+    background-color: white;
+    z-index: 1000;
 }
 
 /* H1 Styling for Title */
 header h1 {
     font-weight: 500; /* Inter Medium for main title */
-    font-size: 1.8em;
+    font-size: 1.6em; /* Reduced by 2 points */
 }
 
 /* Span for Hovered Project Title */
 header h1 #project-title {
     font-weight: 300; /* Inter Light for project title */
-    font-size: 0.9em;
+    font-size: 0.8em; /* Reduced by 2 points */
     color: lightgrey;
     margin-left: 10px;
 }
@@ -44,7 +48,7 @@ header h1 #project-title {
 /* H2 Styling for Subtitle */
 header h2 {
     font-weight: 400; /* Inter Regular */
-    font-size: 1.5em;
+    font-size: 1.3em; /* Reduced by 2 points */
 }
 
 /* Main Images Layout */
@@ -80,4 +84,57 @@ header h2 {
 /* Hover effect: showing project title */
 .image-container:hover img {
     filter: brightness(60%); /* Darken image slightly on hover */
+}
+
+/* Scrollable Project List */
+.project-list {
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.project-list p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+/* Styling project list items */
+.project-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.project-list ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eaeaea;
+    font-size: 1.1rem;
+}
+
+.project-list ul li span {
+    font-weight: 300;
+    font-size: 1rem;
+    color: grey;
+    margin-left: 10px;
+}
+
+.project-list ul li a {
+    font-weight: 500;
+    font-size: 1rem;
+    color: black;
+    text-decoration: none;
+}
+
+.project-list ul li a:hover {
+    text-decoration: underline;
+}
+
+.project-list ul li .coming-soon {
+    font-weight: 400;
+    font-size: 1rem;
+    color: grey;
 }
