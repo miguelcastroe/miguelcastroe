@@ -1,156 +1,146 @@
-/* Resetting default margins and paddings */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Import Inter Font Weights */
+/* Global Styles */
 body {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    background-color: #fff;
     margin: 0;
-    padding: 0;
-    height: 100vh;
-    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
 }
 
-/* Header Styling */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
-    width: 100vw;
-    height: 40px; /* Header height set to 40px */
-    box-sizing: border-box;
-    position: sticky; /* Make header sticky */
-    top: 0; /* Stick it to the top */
-    background-color: white;
-    z-index: 1000;
+    padding: 10px 20px;
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    top: 0;
 }
 
-/* H1 Styling for Title */
-header h1 {
-    font-weight: 500; /* Inter Medium for main title */
-    font-size: 1.6em; /* Reduced by 2 points */
+h1 {
+    font-size: 24px;
+    margin: 0;
 }
 
-/* Span for Hovered Project Title */
-header h1 #project-title {
-    font-weight: 300; /* Inter Light for project title */
-    font-size: 0.8em; /* Reduced by 2 points */
-    color: lightgrey;
-    margin-left: 10px;
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-/* H2 Styling for Subtitle */
-header h2 {
-    font-weight: 400; /* Inter Regular */
-    font-size: 1.3em; /* Reduced by 2 points */
+nav ul li {
+    display: inline;
+    font-weight: bold;
 }
 
-/* Main Images Layout */
-.main-images {
+.projects-container {
     display: flex;
     justify-content: space-between;
-    width: 100vw;
-    height: calc(100vh - 40px); /* Full viewport height minus header */
-    gap: 5px; /* 5px gap between images */
-    overflow: hidden; /* Ensure no scrollbars appear */
+    padding: 80px 20px 0;
+    gap: 5px;
 }
 
-/* Image proportions */
-.image1 {
-    flex: 0 0 50%; /* 50% width */
+.project {
+    flex-grow: 1;
+    flex-basis: 0;
 }
 
-.image2 {
-    flex: 0 0 30%; /* 30% width */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
-.image3 {
-    flex: 0 0 20%; /* 20% width */
-}
-
-/* Image styling */
 .image-container img {
     width: 100%;
-    height: 105%; /* Slightly exceed the full height of the page */
-    object-fit: cover; /* Ensure the image fits without stretching */
+    height: auto;
+    display: block;
 }
 
-/* Hover effect: showing project title */
-.image-container:hover img {
-    filter: brightness(60%); /* Darken image slightly on hover */
-}
-
-/* Styles for the three dots button */
 .ellipsis {
-    background-color: rgba(234, 234, 234, 0.8);
-    backdrop-filter: blur(12px);
-    border-radius: 30px;
     position: absolute;
     bottom: 10px;
     left: 10px;
-    height: 40px;
+    background-color: rgba(234, 234, 234, 0.8);
+    backdrop-filter: blur(12px);
+    border-radius: 50%;
     width: 40px;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.5s, width 0.3s;
-    pointer-events: none;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 2;
-}
-
-.ellipsis a {
-    display: block;
-    cursor: pointer;
-    text-decoration: none;
-    font-weight: 500;
-    color: #000;
-    transition: opacity 0.5s;
-}
-
-/* The three dots */
-.ellipsis .dots {
-    font-size: 1.5rem;
-    line-height: 1;
-    opacity: 1;
-}
-
-.ellipsis .view-project {
-    display: none;
-    font-size: 0.9rem;
     opacity: 0;
+    transition: all 0.3s ease-in-out;
 }
 
-/* Hover state: expand the button */
+.ellipsis span {
+    font-size: 24px;
+    color: black;
+}
+
+/* View Project button hidden initially */
+.view-project {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    display: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Show ellipsis on hover over image */
 .image-container:hover .ellipsis {
-    width: 130px; /* Expand button width */
     opacity: 1;
-    pointer-events: all; /* Enable interaction */
+    width: 40px;
+    height: 40px;
 }
 
-/* On hover, show the "View Project" text and hide the dots */
-.image-container:hover .ellipsis .dots {
+/* Show the View Project button when hovering over the ellipsis */
+.ellipsis:hover .view-project {
+    display: block;
+}
+
+.ellipsis:hover span {
     display: none;
 }
 
-.image-container:hover .ellipsis .view-project {
-    display: block;
-    opacity: 1;
-    font-size: 1rem;
+/* Project list section */
+.project-list {
+    padding: 20px;
 }
 
-/* Style for the expanded button */
-.ellipsis:hover {
-    cursor: pointer;
+.project-list h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
-.ellipsis .view-project {
-    font-weight: 500;
-    color: #000
+.project-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.project-list ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.project-list ul li span {
+    font-weight: normal;
+    color: #777;
+}
+
+.project-list ul li a {
+    color: blue;
+    text-decoration: none;
+}
+
+.project-list ul li a:hover {
+    text-decoration: underline;
+}
