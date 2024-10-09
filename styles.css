@@ -12,6 +12,8 @@ body {
     background-color: #fff;
     margin: 0;
     padding: 0;
+    height: 100vh;
+    overflow: hidden;
 }
 
 /* Header Styling */
@@ -49,37 +51,31 @@ header h2 {
     display: flex;
     justify-content: space-between;
     width: 100vw;
+    height: calc(100vh - 100px); /* 100px to account for the header */
     gap: 10px; /* 10px gap between images */
 }
 
-/* Image 1 takes 60% of the width */
+/* Image proportions */
 .image1 {
-    flex: 0 0 60%;
+    flex: 0 0 50%; /* 50% width */
 }
 
-/* Image 2 takes 30% of the width */
 .image2 {
-    flex: 0 0 30%;
+    flex: 0 0 30%; /* 30% width */
 }
 
-/* Image 3 takes 10% of the width */
 .image3 {
-    flex: 0 0 10%;
+    flex: 0 0 20%; /* 20% width */
 }
 
-/* Common styling for images */
+/* Image styling */
 .image-container img {
     width: 100%;
-    height: auto;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+    height: 100%; /* Full height of the section */
+    object-fit: cover; /* Ensure the image fits without stretching */
 }
 
-/* Slight zoom on hover */
-.image-container:hover img {
-    transform: scale(1.05);
-}
-
+/* Remove zoom on hover */
 .hidden {
     display: none;
 }
