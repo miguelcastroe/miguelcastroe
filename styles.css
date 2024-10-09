@@ -1,70 +1,73 @@
+/* Resetting default margins and paddings */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Import Inter Font Weights */
 body {
     font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    background-color: #fff;
     margin: 0;
     padding: 0;
-    background: #fff;
 }
 
 /* Header Styling */
 header {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
     align-items: center;
+    padding: 20px;
     width: 100vw;
     box-sizing: border-box;
 }
 
+/* H1 Styling for Title */
 header h1 {
-    font-weight: 700; /* Bold for main title */
+    font-weight: 500; /* Inter Medium for main title */
     font-size: 1.8em;
 }
 
+/* Span for Hovered Project Title */
 header h1 #project-title {
-    font-weight: 300; /* Light font for project title */
+    font-weight: 300; /* Inter Light for project title */
     font-size: 0.9em;
     color: lightgrey;
     margin-left: 10px;
 }
 
+/* H2 Styling for Subtitle */
 header h2 {
-    font-weight: 400; /* Regular weight for header right */
+    font-weight: 400; /* Inter Regular */
     font-size: 1.5em;
 }
 
-/* Main images layout */
+/* Main Images Layout */
 .main-images {
     display: flex;
     justify-content: space-between;
-    padding: 0;
-    margin: 0;
     width: 100vw;
-    gap: 10px; /* 10px gap between the images */
+    gap: 10px; /* 10px gap between images */
 }
 
-.image-container {
-    position: relative;
-    overflow: hidden;
-}
-
+/* Image 1 takes 60% of the width */
 .image1 {
-    flex: 0 0 60%; /* First image takes 60% width */
+    flex: 0 0 60%;
 }
 
+/* Image 2 takes 30% of the width */
 .image2 {
-    flex: 0 0 30%; /* Second image takes 30% width */
+    flex: 0 0 30%;
 }
 
+/* Image 3 takes 10% of the width */
 .image3 {
-    flex: 0 0 10%; /* Third image takes 10% width */
+    flex: 0 0 10%;
 }
 
+/* Common styling for images */
 .image-container img {
     width: 100%;
     height: auto;
@@ -72,8 +75,9 @@ header h2 {
     transition: transform 0.3s ease;
 }
 
+/* Slight zoom on hover */
 .image-container:hover img {
-    transform: scale(1.05); /* Slight zoom on hover */
+    transform: scale(1.05);
 }
 
 .hidden {
