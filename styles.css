@@ -100,7 +100,7 @@ header h2 {
     margin-bottom: 10px;
 }
 
-/* Styling project list items */
+/* Styling for Project List Items */
 .project-list ul {
     list-style: none;
     padding: 0;
@@ -108,18 +108,20 @@ header h2 {
 
 .project-list ul li {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; /* Align text to the left */
     padding: 10px 0;
     border-bottom: 1px solid #eaeaea;
     font-size: 1.1rem;
+    text-align: left; /* Ensures text is aligned left */
 }
 
 .project-list ul li span {
     font-weight: 300;
     font-size: 1rem;
     color: grey;
-    margin-left: 10px;
+    margin-left: 0; /* Remove any margin to the left */
 }
 
 .project-list ul li a {
@@ -127,6 +129,7 @@ header h2 {
     font-size: 1rem;
     color: black;
     text-decoration: none;
+    margin-left: auto; /* Ensures the "View" link stays on the right */
 }
 
 .project-list ul li a:hover {
@@ -137,4 +140,13 @@ header h2 {
     font-weight: 400;
     font-size: 1rem;
     color: grey;
+}
+
+/* Styling the gap between images and content */
+.project-list ul li {
+    margin-top: 10px;
+}
+
+.project-list ul li p {
+    font-weight: 500;
 }
