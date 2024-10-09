@@ -51,8 +51,8 @@ header h2 {
     display: flex;
     justify-content: space-between;
     width: 100vw;
-    height: calc(100vh - 100px); /* 100px to account for the header */
-    gap: 10px; /* 10px gap between images */
+    height: calc(100vh - 100px); /* Full viewport height minus header */
+    gap: 5px; /* 5px gap between images */
 }
 
 /* Image proportions */
@@ -75,7 +75,18 @@ header h2 {
     object-fit: cover; /* Ensure the image fits without stretching */
 }
 
-/* Remove zoom on hover */
-.hidden {
-    display: none;
+/* Hover effect: showing project title */
+.image-container:hover img {
+    filter: brightness(60%); /* Darken image slightly on hover */
+}
+
+.image-container:hover ~ header h1 #project-title {
+    content: attr(data-title);
+    color: lightgrey;
+}
+
+/* Hover behavior */
+.image-container:hover ~ header h1 #project-title {
+    font-weight: 300;
+    color: lightgrey;
 }
