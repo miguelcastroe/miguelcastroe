@@ -79,14 +79,3 @@ header h2 {
 .image-container:hover img {
     filter: brightness(60%); /* Darken image slightly on hover */
 }
-
-.image-container:hover ~ header h1 #project-title {
-    content: attr(data-title);
-    color: lightgrey;
-}
-
-/* Hover behavior */
-.image-container:hover ~ header h1 #project-title {
-    font-weight: 300;
-    color: lightgrey;
-}
