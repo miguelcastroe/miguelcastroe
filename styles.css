@@ -1,74 +1,81 @@
-:root {
-    --vertical-outer: 0.375rem;
-    --max-editorial-desktop: 70vw;
-    --gap-d: 0.6rem;
-    --ellipsis: 25;
-    --title-gap: 0.4rem;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Reset padding and margin for the body */
 body {
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
     background: #fff;
-    font-family: FTSystem-GroteskMedium, sans-serif;
 }
 
-/* Make the entire viewport used by the hero section */
-.hero {
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-}
-
-/* Full-bleed layout for hero and images */
-.hero .full-bleed,
-.hero .full-bleed figure {
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-}
-
-/* Flexbox layout for centering content inside hero */
-.hero .centred {
+/* Header Styling */
+header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 20px;
     align-items: center;
-    height: 100vh;
-    text-align: center;
+    width: 100vw;
+    box-sizing: border-box;
 }
 
-/* Full-screen image or video */
-.hero img,
-.hero video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+header h1 {
+    font-weight: 700; /* Bold for main title */
+    font-size: 1.8em;
 }
 
-/* Remove padding and margin between elements */
+header h1 #project-title {
+    font-weight: 300; /* Light font for project title */
+    font-size: 0.9em;
+    color: lightgrey;
+    margin-left: 10px;
+}
+
+header h2 {
+    font-weight: 400; /* Regular weight for header right */
+    font-size: 1.5em;
+}
+
+/* Main images layout */
 .main-images {
     display: flex;
     justify-content: space-between;
     padding: 0;
     margin: 0;
     width: 100vw;
-    gap: 0; /* Remove gaps between images */
+    gap: 10px; /* 10px gap between the images */
 }
 
-/* Ensure images take full width */
 .image-container {
-    flex: 1; /* Make images fill equal space */
+    position: relative;
     overflow: hidden;
 }
 
+.image1 {
+    flex: 0 0 60%; /* First image takes 60% width */
+}
+
+.image2 {
+    flex: 0 0 30%; /* Second image takes 30% width */
+}
+
+.image3 {
+    flex: 0 0 10%; /* Third image takes 10% width */
+}
+
 .image-container img {
-    width: 100vw; /* Full width of the viewport */
-    height: 100vh; /* Full height of the viewport */
-    object-fit: cover; /* Cover entire container */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
     transition: transform 0.3s ease;
 }
 
 .image-container:hover img {
-    transform: scale(1.05); /* Zoom effect on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.hidden {
+    display: none;
 }
