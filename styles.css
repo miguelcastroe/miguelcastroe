@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -6,66 +5,53 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
-.top-section {
-    background-color: white;
-    text-align: center;
-    padding: 50px;
-}
-
-.top-section h1 {
-    font-size: 2.5em;
-    font-weight: bold;
-}
-
-.top-section h1 em {
-    font-style: italic;
-    text-decoration: underline;
-}
-
-nav {
+header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 20px;
 }
 
+header h1, header h2 {
+    font-weight: 400;
+    font-size: 1.5em;
+}
+
+.main-images {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.image-container {
+    width: 32%;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
 .circle-section {
-    background-color: white;
-    text-align: center;
-    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
 }
 
 .circle-image {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     overflow: hidden;
-    display: inline-block;
-    margin: 20px;
+    margin: 0 20px;
 }
 
 .circle-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-.bottom-section {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 50px;
-}
-
-.scroll-down {
-    text-align: center;
-    padding: 20px;
-}
-
-.scroll-down img {
-    margin-top: 10px;
-    width: 30px;
 }
