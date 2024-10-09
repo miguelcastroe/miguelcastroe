@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Miguel Castro Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Import Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <div class="header-left">
-            <h1>Mike's Portfolio <span class="subtext">Apotheanic</span></h1>
+            <h1>Mike's Portfolio <span id="project-title" class="hidden"></span></h1>
         </div>
         <div class="header-right">
             <h2>Work, Studio</h2>
@@ -19,25 +20,27 @@
     </header>
 
     <section class="main-images">
-        <div class="image-container">
+        <div class="image-container" onmouseover="showTitle('Project Title 1')" onmouseout="hideTitle()">
             <img src="image1.jpg" alt="Project 1">
-            <div class="image-overlay">
-                <p>Project Title 1</p>
-            </div>
         </div>
-        <div class="image-container">
+        <div class="image-container" onmouseover="showTitle('Project Title 2')" onmouseout="hideTitle()">
             <img src="image2.jpg" alt="Project 2">
-            <div class="image-overlay">
-                <p>Project Title 2</p>
-            </div>
         </div>
-        <div class="image-container">
+        <div class="image-container" onmouseover="showTitle('Project Title 3')" onmouseout="hideTitle()">
             <img src="image3.jpg" alt="Project 3">
-            <div class="image-overlay">
-                <p>Project Title 3</p>
-            </div>
         </div>
     </section>
 
+    <script>
+        function showTitle(title) {
+            document.getElementById('project-title').textContent = title;
+            document.getElementById('project-title').classList.remove('hidden');
+        }
+
+        function hideTitle() {
+            document.getElementById('project-title').textContent = '';
+            document.getElementById('project-title').classList.add('hidden');
+        }
+    </script>
 </body>
 </html>
