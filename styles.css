@@ -86,67 +86,71 @@ header h2 {
     filter: brightness(60%); /* Darken image slightly on hover */
 }
 
-/* Scrollable Project List */
-.project-list {
-    padding: 20px;
-    margin-top: 20px;
-    width: 100%;
-    overflow-y: auto;
-}
-
-.project-list p {
-    font-size: 1.2rem;
-    font-weight: 500;
-    margin-bottom: 10px;
-}
-
-/* Styling for Project List Items */
-.project-list ul {
-    list-style: none;
-    padding: 0;
-}
-
-.project-list ul li {
+/* Styles for the three dots button */
+.ellipsis {
+    background-color: rgba(234, 234, 234, 0.8);
+    backdrop-filter: blur(12px);
+    border-radius: 30px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s, width 0.3s;
+    pointer-events: none;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start; /* Align text to the left */
-    padding: 10px 0;
-    border-bottom: 1px solid #eaeaea;
-    font-size: 1.1rem;
-    text-align: left; /* Ensures text is aligned left */
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
 }
 
-.project-list ul li span {
-    font-weight: 300;
-    font-size: 1rem;
-    color: grey;
-    margin-left: 0; /* Remove any margin to the left */
-}
-
-.project-list ul li a {
-    font-weight: 500;
-    font-size: 1rem;
-    color: black;
+.ellipsis a {
+    display: block;
+    cursor: pointer;
     text-decoration: none;
-    margin-left: auto; /* Ensures the "View" link stays on the right */
-}
-
-.project-list ul li a:hover {
-    text-decoration: underline;
-}
-
-.project-list ul li .coming-soon {
-    font-weight: 400;
-    font-size: 1rem;
-    color: grey;
-}
-
-/* Styling the gap between images and content */
-.project-list ul li {
-    margin-top: 10px;
-}
-
-.project-list ul li p {
     font-weight: 500;
+    color: #000;
+    transition: opacity 0.5s;
 }
+
+/* The three dots */
+.ellipsis .dots {
+    font-size: 1.5rem;
+    line-height: 1;
+    opacity: 1;
+}
+
+.ellipsis .view-project {
+    display: none;
+    font-size: 0.9rem;
+    opacity: 0;
+}
+
+/* Hover state: expand the button */
+.image-container:hover .ellipsis {
+    width: 130px; /* Expand button width */
+    opacity: 1;
+    pointer-events: all; /* Enable interaction */
+}
+
+/* On hover, show the "View Project" text and hide the dots */
+.image-container:hover .ellipsis .dots {
+    display: none;
+}
+
+.image-container:hover .ellipsis .view-project {
+    display: block;
+    opacity: 1;
+    font-size: 1rem;
+}
+
+/* Style for the expanded button */
+.ellipsis:hover {
+    cursor: pointer;
+}
+
+.ellipsis .view-project {
+    font-weight: 500;
+    color: #000
