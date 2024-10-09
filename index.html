@@ -27,5 +27,19 @@
         </div>
     </section>
 
+    <script>
+        // Script to handle hover functionality for showing the project title
+        const containers = document.querySelectorAll('.image-container');
+        const projectTitle = document.getElementById('project-title');
+
+        containers.forEach(container => {
+            container.addEventListener('mouseenter', function() {
+                projectTitle.textContent = this.getAttribute('data-title');
+            });
+            container.addEventListener('mouseleave', function() {
+                projectTitle.textContent = '';
+            });
+        });
+    </script>
 </body>
 </html>
