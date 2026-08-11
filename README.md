@@ -7,7 +7,7 @@ I work where brand, product, technology and culture meet. My practice is focused
 
 Some projects are shipped. Some are prototypes. Some are frameworks. Some are still confidential. All of them start from the same place: finding the quiet failure inside something that appears to be working, then making it visible enough to become useful.
 
-[Portfolio](https://global.miguelcastro.works) · [LinkedIn](https://linkedin.com/in/miguelcastroe)
+[Portfolio](https://miguelcastro.works) · [LinkedIn](https://linkedin.com/in/miguelcastroe)
 
 ---
 
